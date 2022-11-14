@@ -1,3 +1,6 @@
+import { SpaceLocation } from './SpaceLocation.js';
+
+
 // Part 1: Declare (5) Variables With Type
 
 const spacecraftName: string = 'Determination';
@@ -15,7 +18,6 @@ const daysToMars: number = hoursToMars / 24;
 
 // Code an output statement here (use a template literal):
 
-
 //console.log(`${spacecraftName} would take ${daysToMars} days to get to Mars.`)
 
 
@@ -32,16 +34,15 @@ function getDaysToLocation(kilometersAway: number): number {
 }
 
 
-
-
 // Move your output statement from part 2 here. Update the template literal to call
 // the function and print the outputs for a Mars trip and a moon trip.
 
 
+// console.log(`${spacecraftName} would take ${getDaysToLocation(kilometersToMars)} days to get to Mars.`);
+// console.log(`${spacecraftName} would take ${getDaysToLocation(kilometersToTheMoon)} days to get to Moon.`);
 
 
 // Part 4: Create a Spacecraft Class
-
 
 class Spacecraft {
     protected milesPerKilometer: number = 0.621;
@@ -69,11 +70,13 @@ class Spacecraft {
 
 // Create an instance of the class here:
 
-
+let spaceShuttle = new Spacecraft('Determination', 17500);
 
 // Move your output statements from part 3 here. Update the template literals use the
 // instance of the class.
 
+console.log(`${spaceShuttle.name} would take ${spaceShuttle.getDaysToLocation(kilometersToMars)} days to get to Mars.`);
+console.log(`${spaceShuttle.name} would take ${spaceShuttle.getDaysToLocation(kilometersToTheMoon)} days to get to Moon.`);
 
 
 // Part 5: Export and Import the SpaceLocation Class
@@ -84,7 +87,7 @@ class Spacecraft {
 
 // Use the class instance to print out the days to Mars and the Moon here:
 
-/*
+
 spaceShuttle.printDaysToLocation(new SpaceLocation('Mars', kilometersToMars));
 spaceShuttle.printDaysToLocation(new SpaceLocation('the Moon', kilometersToTheMoon));
-*/
+
