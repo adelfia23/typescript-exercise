@@ -37,7 +37,7 @@ export class Rocket {
         }
     }
 
-    sumMass(items: Payload[]): number {
+    protected sumMass(items: Payload[]): number {
         const sum: number = items.reduce(
             (acc: number, item: Payload) => acc + item.massKg,
             0
@@ -45,7 +45,7 @@ export class Rocket {
         return sum;
     }
 
-    currentMassKg(): number {
+    public currentMassKg(): number {
 
         const sumAstronauts: number = this.astronauts.reduce(
             (acc: number, astronaut: Astronaut) => acc + astronaut.massKg,
@@ -60,7 +60,7 @@ export class Rocket {
         return sumAstronauts + cargoItems;
     }
 
-    canAdd(item: Payload): boolean {
+    public canAdd(item: Payload): boolean {
         if (this.currentMassKg() + item.massKg <= this.totalCapacityKg) {
             return true;
         } else {
@@ -68,7 +68,7 @@ export class Rocket {
         }
     }
 
-    addCargo(cargo: Cargo): boolean {
+    public addCargo(cargo: Cargo): boolean {
         
         if (this.canAdd(cargo) === true) {
             this.cargoItems.push(cargo);
@@ -78,7 +78,7 @@ export class Rocket {
         }
     }
 
-    addAstronaut(astronaut: Astronaut): boolean {
+    public addAstronaut(astronaut: Astronaut): boolean {
         if (this.canAdd(astronaut) === true) {
             this.astronauts.push(astronaut);
             return true;
