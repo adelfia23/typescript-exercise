@@ -1,4 +1,4 @@
-import { SpaceLocation } from '../SpaceLocation.js';
+import { SpaceLocation } from './SpaceLocation.js';
 
 
 // Part 1: Declare (5) Variables With Type
@@ -39,7 +39,7 @@ function getDaysToLocation(kilometersAway: number): number {
 
 
 // console.log(`${spacecraftName} would take ${getDaysToLocation(kilometersToMars)} days to get to Mars.`);
-// console.log(`${spacecraftName} would take ${getDaysToLocation(kilometersToTheMoon)} days to get to Moon.`);
+// console.log(`${spacecraftName} would take ${getDaysToLocation(kilometersToTheMoon)} days to get to the Moon.`);
 
 
 // Part 4: Create a Spacecraft Class
@@ -76,7 +76,7 @@ let spaceShuttle = new Spacecraft('Determination', 17500);
 // instance of the class.
 
 console.log(`${spaceShuttle.name} would take ${spaceShuttle.getDaysToLocation(kilometersToMars)} days to get to Mars.`);
-console.log(`${spaceShuttle.name} would take ${spaceShuttle.getDaysToLocation(kilometersToTheMoon)} days to get to Moon.`);
+console.log(`${spaceShuttle.name} would take ${spaceShuttle.getDaysToLocation(kilometersToTheMoon)} days to get to the Moon.`);
 
 
 // Part 5: Export and Import the SpaceLocation Class
