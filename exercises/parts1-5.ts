@@ -43,6 +43,28 @@ function getDaysToLocation(kilometersAway: number): number {
 // Part 4: Create a Spacecraft Class
 
 
+class Spacecraft {
+    protected milesPerKilometer: number = 0.621;
+    public name: string;
+    protected speedMph: number;
+
+    constructor(name: string, speedMph: number) {
+        this.name = name;
+        this.speedMph = speedMph;
+    }
+
+    getDaysToLocation(kilometersAway: number): number {
+        const milesToLocation: number = kilometersAway * this.milesPerKilometer;
+        const hoursToLocation: number = milesToLocation / this.speedMph;
+        const daysToLocation: number = hoursToLocation / 24;
+    
+        return daysToLocation;
+    }
+
+    printDaysToLocation(location: SpaceLocation) {
+        console.log(`${this.name} would take ${this.getDaysToLocation(location.kilometersAway)} days to get to ${location.name}.`);
+     }
+}
 
 
 // Create an instance of the class here:
