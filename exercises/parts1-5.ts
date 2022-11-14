@@ -16,8 +16,21 @@ const daysToMars: number = hoursToMars / 24;
 // Code an output statement here (use a template literal):
 
 
+//console.log(`${spacecraftName} would take ${daysToMars} days to get to Mars.`)
+
 
 // Part 3: Create a Function ("getDaysToLocation")
+
+function getDaysToLocation(kilometersAway: number): number {
+
+    const milesToLocation: number = kilometersAway * milesPerKilometer;
+    const hoursToLocation: number = milesToLocation / speedMph;
+    const daysToLocation: number = hoursToLocation / 24;
+
+    return daysToLocation;
+
+}
+
 
 
 
