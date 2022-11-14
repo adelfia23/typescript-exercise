@@ -1,4 +1,4 @@
-import { Payload } from './Payload';
+import { Payload } from './Payload.js';
 export class Astronaut implements Payload {
     private _massKg: number;
     private _name: string;

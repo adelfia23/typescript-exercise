@@ -1,4 +1,7 @@
-import { Astronaut } from './Astronaut';
+import { Rocket } from './Rocket.js';
+import { Cargo } from './Cargo.js';
+import { Astronaut } from './Astronaut.js';
+
 // TODO: 
 // * Code the Astronaut, Cargo, and Rocket classes in new files.
 // * Import the three classes into this file.

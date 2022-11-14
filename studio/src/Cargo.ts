@@ -1,4 +1,4 @@
-import { Payload } from './Payload';
+import { Payload } from './Payload.js';
 export class Cargo implements Payload {
     private _massKg: number;
     private _material: string;
